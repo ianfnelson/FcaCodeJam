@@ -11,6 +11,10 @@
       <Content Include="TestData\2024-24.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
+      <None Remove="TestData\2024-28.txt" />
+      <Content Include="TestData\2024-28.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
     <ItemGroup>
