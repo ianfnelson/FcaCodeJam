@@ -20,6 +20,10 @@
       <Content Include="InputFiles\2024-28.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
+      <None Remove="InputFiles\2024-38.txt" />
+      <Content Include="InputFiles\2024-38.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>
