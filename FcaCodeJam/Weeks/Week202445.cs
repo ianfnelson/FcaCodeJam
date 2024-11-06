@@ -6,9 +6,9 @@ public class Week202445 : WeekBase
     {
         yield return inputData
             .Select(code => new BoardingPass(code))
-            .OrderByDescending(boardingPass => boardingPass.SeatId)
-            .First()
-            .Code;
+            .Select(boardingPass => boardingPass.SeatId)
+            .Max()
+            .ToString();
     }
 
     public override int Year => 2024;
