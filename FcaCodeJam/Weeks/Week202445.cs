@@ -18,21 +18,11 @@ public class Week202445 : WeekBase
     {
         public string Code { get; } = code;
 
-        public int Row { get; } = RowFromCode(code[..7]);
+        public int Row { get; } = ObfuscatedBinaryToInteger(code[..7], 'F', 'B');
 
-        public int Column { get; } = ColumnFromCode(code[7..]);
+        public int Column { get; } = ObfuscatedBinaryToInteger(code[7..], 'L', 'R');
 
         public int SeatId => Row * 8 + Column;
-        
-        private static int RowFromCode(string encodedRow)
-        {
-            return ObfuscatedBinaryToInteger(encodedRow, 'F', 'B');
-        }
-
-        private static int ColumnFromCode(string encodedColumn)
-        {
-            return ObfuscatedBinaryToInteger(encodedColumn, 'L', 'R');
-        }
 
         private static int ObfuscatedBinaryToInteger(string obfuscatedBinary, char zeroCharacter, char oneCharacter)
         {
